@@ -322,7 +322,7 @@ export default function PersonalDetails({
           onChange={(value) => {
             onChange("birthday", value);
 
-            const calculatedAge = calculateAge(value, "2025-12-08");
+            const calculatedAge = calculateAge(value, "2025-11-21");
 
             onChange("age", calculatedAge);
           }}
@@ -332,7 +332,7 @@ export default function PersonalDetails({
 
         {/* Age */}
         <TextField
-          label="Age as at 80.12.2025 (Automatically calculated)"
+          label="Age as at 21.11.2025 (Automatically calculated)"
           name="age"
           value={data.age}
           onChange={() => {}}

@@ -50,7 +50,7 @@ export default function ICTEmploymentDetails({
           onChange={(value) =>
             updateField("currentPosition", value)
           }
-          placeholder="Example: Grade II / Grade I"
+          placeholder="Example: Class 3 Grade I / class 3 Grade II / class 3 Grade III with 5 Year Service"
           required
           error={errors.currentPosition}
         />
