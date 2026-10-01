@@ -1,0 +1,1586 @@
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+  --primary: #0f4c81;
+  --primary-dark: #09345a;
+  --secondary: #1e88e5;
+
+  --success: #2e7d32;
+  --danger: #d32f2f;
+
+  --background: #f3f7fb;
+  --card: #ffffff;
+
+  --border: #d9e2ec;
+
+  --text: #263238;
+  --text-light: #607d8b;
+
+  --radius: 16px;
+
+  --shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+
+  --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 5px;
+
+  font-family:
+    Arial,
+    "Noto Sans Sinhala",
+    "Noto Sans Tamil",
+    sans-serif;
+
+  background: var(--background);
+
+  color: var(--text);
+
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.page {
+  width: min(1400px, 95%);
+
+  margin: 0 auto;
+
+  padding: 35px 0 20px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.app-header {
+  width: 100%;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  color: white;
+
+  padding: 35px 30px;
+
+  border-radius: 15px;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 20px;
+}
+
+
+/* Header inner */
+
+.app-header-inner {
+  width: min(1200px, 100%);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HEADER LOGO
+========================================================= */
+
+.app-header .logo {
+  width: 115px;
+  height: 115px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.app-header .logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   HEADER MAIN TITLE
+========================================================= */
+
+.app-header h1 {
+  margin: 10px 0 15px;
+
+  font-size: clamp(
+    1.6rem,
+    3vw,
+    2.2rem
+  );
+
+  line-height: 1.35;
+
+  font-weight: 700;
+
+  color: white;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   HEADER SUB TITLES
+========================================================= */
+
+.app-header h3 {
+  margin: 10px 0;
+
+  font-size: clamp(
+    0.9rem,
+    1.8vw,
+    1.05rem
+  );
+
+  line-height: 1.8;
+
+  font-weight: 500;
+
+  color: white;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* First ministry heading */
+
+.app-header h3:first-of-type {
+  margin-top: 0;
+
+  font-size: clamp(
+    0.9rem,
+    1.7vw,
+    1rem
+  );
+
+  font-weight: 500;
+
+  opacity: 0.9;
+}
+
+
+/* Last Sinhala/Tamil headings */
+
+.app-header h3:nth-of-type(n + 2) {
+  max-width: 1050px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   FORM SECTION / CARD
+========================================================= */
+
+.form-section {
+  width: 100%;
+
+  margin: 0 auto 24px;
+
+  background: var(--card);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header {
+  width: 100%;
+
+  padding: 22px 30px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  background: white;
+
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* Section number */
+
+.section-number {
+  width: 46px;
+  min-width: 46px;
+
+  height: 46px;
+  min-height: 46px;
+
+  flex: 0 0 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  color: white;
+
+  font-weight: 700;
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  box-shadow:
+    0 5px 15px
+    rgba(15, 76, 129, 0.25);
+
+  flex-shrink: 0;
+}
+
+
+/* Section text */
+
+.section-header > div:last-child {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  color: var(--primary-dark);
+
+  font-size: 19px;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.section-header p {
+  margin: 4px 0 0;
+
+  color: var(--text-light);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SECTION CONTENT
+========================================================= */
+
+.section-content {
+  width: 100%;
+
+  padding: 30px;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.form-group > label,
+.radio-question {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.6;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* Required */
+
+.required-mark {
+  color: var(--danger);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 13px 15px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: white;
+
+  color: var(--text);
+
+  font-size: 15px;
+
+  font-family: inherit;
+
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    background var(--transition);
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--secondary);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(30, 136, 229, 0.12);
+}
+
+
+/* Disabled */
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+  background: #eef3f8;
+
+  color: #607d8b;
+
+  cursor: not-allowed;
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9aa7b2;
+}
+
+
+/* =========================================================
+   FIELD HELP / ERROR
+========================================================= */
+
+.field-example {
+  color: var(--text-light);
+
+  font-size: 12px;
+
+  margin-top: 5px;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.field-error {
+  color: var(--danger);
+
+  font-size: 12px;
+
+  margin-top: 5px;
+
+  line-height: 1.5;
+}
+
+.input-error {
+  border-color: var(--danger) !important;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(211, 47, 47, 0.1) !important;
+}
+
+
+/* =========================================================
+   RADIO GROUP
+========================================================= */
+
+.radio-question {
+  margin-bottom: 12px;
+}
+
+.radio-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.radio-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    20px minmax(0, 1fr);
+
+  align-items: start;
+
+  column-gap: 8px;
+}
+
+.radio-row input[type="radio"] {
+  width: 16px;
+  height: 16px;
+
+  margin: 4px 0 0;
+
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.radio-text {
+  margin: 0 !important;
+
+  font-size: 14px;
+
+  font-weight: 400 !important;
+
+  line-height: 1.7;
+
+  cursor: pointer;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education-subsection {
+  padding: 25px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.education-subsection:first-child {
+  padding-top: 0;
+}
+
+.education-subsection:last-child {
+  border-bottom: none;
+
+  padding-bottom: 0;
+}
+
+.education-subsection h3 {
+  margin: 0 0 5px;
+
+  color: var(--primary);
+
+  font-size: 20px;
+
+  line-height: 1.5;
+}
+
+.education-subtitle {
+  margin-bottom: 20px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.6;
+}
+
+.education-description {
+  margin-bottom: 25px;
+
+  padding: 18px 20px;
+
+  background: #f8fafc;
+
+  border-left:
+    4px solid var(--primary);
+
+  border-radius: 8px;
+
+  line-height: 1.8;
+
+  font-size: 14px;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   ICT EDUCATION & PROFESSIONAL QUALIFICATIONS
+========================================================= */
+
+.qualification-subsection {
+  width: 100%;
+
+  margin-top: 32px;
+}
+
+.qualification-subsection:first-of-type {
+  margin-top: 0;
+}
+
+
+/* Section subtitle */
+
+.section-subtitle {
+  margin: 0 0 16px 0;
+
+  color: var(--primary);
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SPECIALIZED FIELDS TABLE
+========================================================= */
+
+.specialized-fields-table {
+  width: 100%;
+
+  margin-top: 16px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
+.specialized-header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) 280px;
+
+  background: #f3f6f9;
+
+  border-bottom: 1px solid var(--border);
+
+  font-weight: 600;
+
+  color: #243b53;
+}
+
+.specialized-header > div {
+  padding: 14px 16px;
+
+  min-width: 0;
+}
+
+.specialized-header > div:last-child {
+  text-align: center;
+
+  border-left: 1px solid var(--border);
+}
+
+
+/* ---------------------------------------------------------
+   ROW
+--------------------------------------------------------- */
+
+.specialized-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) 280px;
+
+  min-height: 58px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.specialized-row:last-child {
+  border-bottom: none;
+}
+
+
+/* ---------------------------------------------------------
+   FIELD NAME
+--------------------------------------------------------- */
+
+.specialized-field-name {
+  display: flex;
+
+
+  min-width: 0;
+
+  padding: 12px 16px;
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------------------------------------------------------
+   RATING AREA
+--------------------------------------------------------- */
+
+.specialized-rating {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 22px;
+
+  padding: 10px 16px;
+
+  border-left: 1px solid #e5e7eb;
+}
+
+
+/* ---------------------------------------------------------
+   RATING OPTION
+--------------------------------------------------------- */
+
+.rating-option {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  color: var(--text);
+
+  user-select: none;
+}
+
+.rating-option input[type="radio"] {
+  width: 17px;
+  height: 17px;
+
+  margin: 0;
+
+  cursor: pointer;
+
+  accent-color: var(--primary);
+}
+
+.rating-option span {
+  min-width: 14px;
+
+  text-align: center;
+
+  font-weight: 500;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER EFFECT
+--------------------------------------------------------- */
+
+.specialized-row:hover {
+  background: #f8fafc;
+}
+
+.rating-option:hover {
+  color: var(--primary);
+}
+
+
+/* =========================================================
+   DECLARATION
+========================================================= */
+
+.declaration-box {
+  width: 100%;
+}
+
+.declaration-text {
+  width: 100%;
+
+  padding: 22px;
+
+  background: #f8fafc;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  line-height: 1.8;
+
+  font-size: 14px;
+
+  overflow-wrap: anywhere;
+}
+
+.declaration-text p {
+  margin-bottom: 16px;
+}
+
+.declaration-text p:last-child {
+  margin-bottom: 0;
+}
+
+.declaration-divider {
+  width: 100%;
+
+  height: 1px;
+
+  background: var(--border);
+
+  margin: 22px 0;
+}
+
+
+/* =========================================================
+   DECLARATION CHECKBOX
+========================================================= */
+
+.declaration-checkbox {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 20px;
+
+  padding: 18px;
+
+  background: #f0f7ff;
+
+  border: 1px solid #bfdbfe;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.declaration-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+
+  margin: 4px 0 0;
+
+  flex: 0 0 18px;
+
+  cursor: pointer;
+}
+
+.declaration-checkbox span {
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  font-weight: 600;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.submit-area {
+  width: 100%;
+
+  margin: 30px 0;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 50%;
+
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(15, 76, 129, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  background: #aab7c4;
+
+  color: white;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+
+  opacity: 0.8;
+}
+
+.submit-area .btn {
+  width: min(500px, 100%);
+
+  padding: 17px 24px;
+
+  border-radius: 12px;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-container {
+  width: 100%;
+
+  margin-top: 35px;
+}
+
+.footer {
+  width: 100%;
+
+  padding: 30px 20px;
+
+  text-align: center;
+
+  color: var(--text-light);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.footer p {
+  margin: 4px 0;
+
+  overflow-wrap: anywhere;
+}
+
+.footer-title {
+  color: var(--primary);
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.footer-system {
+  margin-top: 12px !important;
+
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+.footer-system strong {
+  color: var(--primary);
+}
+
+.footer-version {
+  color: var(--text-light);
+
+  font-size: 12px;
+}
+
+.footer-divider {
+  width: 80px;
+
+  height: 2px;
+
+  margin: 18px auto;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  border-radius: 2px;
+}
+
+
+/* =========================================================
+   FOOTER CONTACT
+========================================================= */
+
+.footer-contact {
+  margin-top: 20px;
+}
+
+.footer-contact-title {
+  margin-bottom: 10px !important;
+
+  color: var(--primary);
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.footer-contact-list {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.footer-contact-list p {
+  margin: 0;
+}
+
+.footer-contact-list strong {
+  color: var(--text);
+}
+
+.footer-contact-list a {
+  color: var(--primary);
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: color 0.3s ease;
+}
+
+.footer-contact-list a:hover {
+  color: var(--secondary);
+
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  margin-top: 8px !important;
+
+  color: var(--text-light);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .page {
+    width: 94%;
+
+    padding-top: 25px;
+  }
+
+  .app-header {
+    padding: 30px 25px;
+  }
+
+  .app-header h3 {
+    font-size: 0.95rem;
+  }
+
+  /*
+    Two-column form fields become
+    one column on tablet/mobile.
+  */
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -------------------------------------------------------
+     SECTION
+  ------------------------------------------------------- */
+
+  .section-header {
+    padding: 18px;
+
+    gap: 12px;
+  }
+
+  .section-content {
+    padding: 22px 18px;
+  }
+
+
+  /* -------------------------------------------------------
+     SPECIALIZED TABLE
+  ------------------------------------------------------- */
+
+  .specialized-header,
+  .specialized-row {
+    grid-template-columns: 1fr;
+  }
+
+  .specialized-header > div:last-child {
+    display: none;
+  }
+
+  .specialized-field-name {
+    padding-bottom: 4px;
+
+    font-weight: 500;
+  }
+
+  .specialized-rating {
+    justify-content: flex-start;
+
+    padding: 8px 16px 14px;
+
+    border-left: none;
+  }
+
+
+  /* -------------------------------------------------------
+     QUALIFICATION SECTIONS
+  ------------------------------------------------------- */
+
+  .qualification-subsection {
+    margin-top: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .page {
+    width: 94%;
+
+    padding: 18px 0 25px;
+  }
+
+
+  /* -------------------------------------------------------
+     HEADER
+  ------------------------------------------------------- */
+
+  .app-header {
+    padding: 28px 18px;
+
+    border-radius: 16px;
+
+    margin-bottom: 20px;
+  }
+
+  .app-header-inner {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .app-header .logo {
+    width: 90px;
+    height: 90px;
+
+    margin-bottom: 15px;
+  }
+
+  .app-header h1 {
+    font-size: 1.35rem;
+
+    line-height: 1.45;
+
+    margin-bottom: 12px;
+  }
+
+  .app-header h3 {
+    font-size: 0.85rem;
+
+    line-height: 1.8;
+
+    margin: 8px 0;
+  }
+
+  .app-header h3:first-of-type {
+    font-size: 0.85rem;
+  }
+
+
+  /* -------------------------------------------------------
+     FORM
+  ------------------------------------------------------- */
+
+  .form-section {
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+  }
+
+
+  /* -------------------------------------------------------
+     SECTION HEADER
+  ------------------------------------------------------- */
+
+  .section-header {
+    padding: 18px;
+
+    gap: 12px;
+  }
+
+  .section-number {
+    width: 42px;
+    min-width: 42px;
+
+    height: 42px;
+    min-height: 42px;
+
+    flex-basis: 42px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+  }
+
+  .section-header h2 {
+    font-size: 17px;
+
+    line-height: 1.45;
+  }
+
+  .section-header p {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+
+  /* -------------------------------------------------------
+     SECTION CONTENT
+  ------------------------------------------------------- */
+
+  .section-content {
+    padding: 20px 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     FORM GRID
+  ------------------------------------------------------- */
+
+  .form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  /* -------------------------------------------------------
+     INPUTS
+  ------------------------------------------------------- */
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 13px;
+
+    font-size: 14px;
+  }
+
+
+  /* -------------------------------------------------------
+     SPECIALIZED TABLE
+  ------------------------------------------------------- */
+
+  .specialized-fields-table {
+    margin-top: 12px;
+
+    border-radius: 7px;
+  }
+
+  .specialized-field-name {
+    padding: 11px 13px;
+
+    font-size: 13px;
+  }
+
+  .specialized-rating {
+    gap: 16px;
+
+    padding: 8px 13px 13px;
+  }
+
+  .rating-option {
+    font-size: 13px;
+
+    gap: 4px;
+  }
+
+  .rating-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     QUALIFICATION SECTIONS
+  ------------------------------------------------------- */
+
+  .qualification-subsection {
+    margin-top: 26px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 13px;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+
+  /* -------------------------------------------------------
+     DECLARATION
+  ------------------------------------------------------- */
+
+  .declaration-text {
+    padding: 17px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .declaration-checkbox {
+    padding: 15px;
+
+    gap: 10px;
+  }
+
+  .declaration-checkbox span {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* -------------------------------------------------------
+     SUBMIT BUTTON
+  ------------------------------------------------------- */
+
+  .submit-area {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin: 25px 0;
+  }
+
+  .submit-area .btn {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    font-size: 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     FOOTER
+  ------------------------------------------------------- */
+
+  .footer {
+    padding: 25px 15px;
+
+    font-size: 13px;
+  }
+}
+
+.academic-header {
+  grid-template-columns: 1fr 280px;
+}
+
+.academic-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding: 10px 16px;
+  border-left: 1px solid #e5e7eb;
+}
+
+.academic-options .rating-option {
+  min-width: 55px;
+}
+
+@media (max-width: 768px) {
+  .academic-header {
+    grid-template-columns: 1fr;
+  }
+
+  .academic-header > div:last-child {
+    display: none;
+  }
+
+  .academic-options {
+    justify-content: flex-start;
+    padding: 8px 16px 14px;
+    border-left: none;
+    gap: 25px;
+  }
+}
+
+.specialized-field-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.specialized-field-title {
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+.specialized-field-example {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+.specialized-field-example em {
+  font-style: italic;
+}
+
+.academic-options,
+.specialized-rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.specialized-field-error {
+  flex-basis: 100%;
+  width: 100%;
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.specialized-row-error {
+  border-left: 3px solid #dc2626;
+  background-color: #fff7f7;
+}
+
+.specialized-row-error
+  .specialized-field-title {
+  color: #b91c1c;
+}
