@@ -27,7 +27,7 @@ export default function Declaration({
 
           <p>
             I certify that I possess the required qualifications for appointment to 
-            Class 1, Grade III of the Sri Lanka Information and Communication Technology Service. 
+            Class 2, Grade II of the Sri Lanka Information and Communication Technology Service. 
             furthermore, I pledge that, should I be selected for the appointment, 
             I will serve at the assigned duty station and will not request a change of the assigned 
             duty station for any reason.
