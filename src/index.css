@@ -1584,3 +1584,82 @@ img {
   .specialized-field-title {
   color: #b91c1c;
 }
+
+
+.experience-rating-guide {
+  margin: 16px 0 22px;
+  padding: 20px;
+  background: #f4f8fc;
+  border: 1px solid #d7e5f3;
+  border-radius: 12px;
+}
+
+.experience-guide-title {
+  margin: 0 0 6px;
+  color: #0f4c81;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.experience-guide-description {
+  margin: 0 0 22px;
+  color: #526579;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.experience-scale {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.experience-scale-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+}
+
+.experience-scale-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #b9cde0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0f4c81;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.experience-scale-label {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .experience-rating-guide {
+    padding: 16px 10px;
+  }
+
+  .experience-scale {
+    gap: 5px;
+  }
+
+  .experience-scale-number {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .experience-scale-label {
+    font-size: 10px;
+    overflow-wrap: anywhere;
+  }
+}

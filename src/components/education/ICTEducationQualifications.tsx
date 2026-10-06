@@ -337,6 +337,33 @@ export default function ICTEducationQualifications({
           Rate your professional experience in each ICT field from 1 to 5.
         </p>
 
+        <div className="experience-scale">
+    <div className="experience-scale-item">
+      <span className="experience-scale-number">1</span>
+      <span className="experience-scale-label">No Experience</span>
+    </div>
+
+    <div className="experience-scale-item">
+      <span className="experience-scale-number">2</span>
+      <span className="experience-scale-label">Basic</span>
+    </div>
+
+    <div className="experience-scale-item">
+      <span className="experience-scale-number">3</span>
+      <span className="experience-scale-label">Moderate</span>
+    </div>
+
+    <div className="experience-scale-item">
+      <span className="experience-scale-number">4</span>
+      <span className="experience-scale-label">Advanced</span>
+    </div>
+
+    <div className="experience-scale-item">
+      <span className="experience-scale-number">5</span>
+      <span className="experience-scale-label">Extensive</span>
+    </div>
+  </div>
+
         <div className="specialized-fields-table">
           <div className="specialized-header">
             <div>ICT Specialized Field</div>
