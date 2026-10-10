@@ -350,54 +350,54 @@ export function validateEducationQualifications(
      DEGREE / MAIN QUALIFICATION
   ======================================================= */
 
-  errors.qualification =
-    required(
-      data.qualification,
-      "Education qualification"
-    );
+  // errors.qualification =
+  //   required(
+  //     data.qualification,
+  //     "Education qualification"
+  //   );
 
   /* -----------------------------------------------
      University / Institute
   ------------------------------------------------ */
 
-  errors.university =
-    required(
-      data.university,
-      "University / Institute / College"
-    );
+  // errors.university =
+  //   required(
+  //     data.university,
+  //     "University / Institute / College"
+  //   );
 
   /* -----------------------------------------------
      Specialization / Major
   ------------------------------------------------ */
 
-  errors.specialization =
-    required(
-      data.specialization,
-      "Specialization / Major"
-    );
+  // errors.specialization =
+  //   required(
+  //     data.specialization,
+  //     "Specialization / Major"
+  //   );
 
   /* -----------------------------------------------
      Degree Effective Date
   ------------------------------------------------ */
 
-  if (!data.degreeEffectiveDate.trim()) {
-    errors.degreeEffectiveDate =
-      "Degree effective date is required.";
-  } else if (
-    !isValidDate(
-      data.degreeEffectiveDate
-    )
-  ) {
-    errors.degreeEffectiveDate =
-      "Enter a valid degree effective date.";
-  } else if (
-    isFutureDate(
-      data.degreeEffectiveDate
-    )
-  ) {
-    errors.degreeEffectiveDate =
-      "Degree effective date cannot be in the future.";
-  }
+  // if (!data.degreeEffectiveDate.trim()) {
+  //   errors.degreeEffectiveDate =
+  //     "Degree effective date is required.";
+  // } else if (
+  //   !isValidDate(
+  //     data.degreeEffectiveDate
+  //   )
+  // ) {
+  //   errors.degreeEffectiveDate =
+  //     "Enter a valid degree effective date.";
+  // } else if (
+  //   isFutureDate(
+  //     data.degreeEffectiveDate
+  //   )
+  // ) {
+  //   errors.degreeEffectiveDate =
+  //     "Degree effective date cannot be in the future.";
+  // }
 
   /* =======================================================
      POSTGRADUATE QUALIFICATION

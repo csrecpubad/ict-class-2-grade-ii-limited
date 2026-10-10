@@ -145,8 +145,6 @@ export default function ICTEducationQualifications({
           value={value.qualification}
           onChange={(text) => updateField("qualification", text)}
           placeholder="Full BSc. in ICT (3 years)"
-          required
-          error={errors.qualification}
         />
 
         <TextField
@@ -155,8 +153,6 @@ export default function ICTEducationQualifications({
           value={value.university}
           onChange={(text) => updateField("university", text)}
           placeholder="University Name"
-          required
-          error={errors.university}
         />
 
         <TextField
@@ -165,8 +161,6 @@ export default function ICTEducationQualifications({
           value={value.specialization}
           onChange={(text) => updateField("specialization", text)}
           placeholder="Specialization Name"
-          required
-          error={errors.specialization}
         />
 
         <TextField
@@ -175,8 +169,6 @@ export default function ICTEducationQualifications({
           value={value.degreeEffectiveDate}
           onChange={(text) => updateField("degreeEffectiveDate", text)}
           placeholder="YYYY-MM-DD"
-          required
-          error={errors.degreeEffectiveDate}
         />
 
         <TextField
